@@ -37,4 +37,3 @@ Scenario: User can log in
 	And inceases quantity to 2
 	When user clicks on add to cart button
 	Then product is added to the cart
-	And test
