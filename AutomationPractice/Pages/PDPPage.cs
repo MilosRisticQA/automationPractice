@@ -8,18 +8,15 @@ using System.Threading.Tasks;
 
 namespace AutomationPractice.Pages
 {
-    class HomePage
+    class PDPPage
     {
         readonly IWebDriver driver;
 
-        public By signIn = By.ClassName("login");
-        public By dressesSection = By.
-
-        public HomePage(IWebDriver driver)
+        public PDPPage(IWebDriver driver)
         {
             this.driver = driver;
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.Id("index")));         
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.Id("columns")));
         }
     }
 }
