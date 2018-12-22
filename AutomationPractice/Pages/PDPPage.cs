@@ -11,6 +11,7 @@ namespace AutomationPractice.Pages
     class PDPPage
     {
         readonly IWebDriver driver;
+        public By newWish = By.Id("form_wishlist");
 
         public PDPPage(IWebDriver driver)
         {

@@ -13,7 +13,7 @@ namespace AutomationPractice.Pages
         readonly IWebDriver driver;
 
         public By signIn = By.ClassName("login");
-        public By dressesSection = By.
+        //public By dressesSection = By.
 
         public HomePage(IWebDriver driver)
         {

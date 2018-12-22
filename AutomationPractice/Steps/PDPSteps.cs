@@ -17,7 +17,7 @@ namespace AutomationPractice.Steps
         {
             Utilities ut = new Utilities(Driver);
             HomePage hp = new HomePage(Driver);
-            ut.ClickOnElement
+            //ut.ClickOnElement
         }
 
 
