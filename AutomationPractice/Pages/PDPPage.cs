@@ -11,6 +11,7 @@ namespace AutomationPractice.Pages
     class PDPPage
     {
         readonly IWebDriver driver;
+        public By logOut = By.ClassName("logout");
 
         public PDPPage(IWebDriver driver)
         {
