@@ -1,5 +1,7 @@
 ﻿using AutomationPractice.Helpers;
 using AutomationPractice.Pages;
+using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +17,57 @@ namespace AutomationPractice.Steps
         [Given(@"user opens dresses section")]
         public void GivenUserOpensDressesSection()
         {
-            Utilities ut = new Utilities(Driver);
+            //Utilities ut = new Utilities(Driver);
             HomePage hp = new HomePage(Driver);
-            //ut.ClickOnElement
+            IList<IWebElement> dresses = Driver.FindElements(hp.dressesSection);
+            dresses[1].Click();
         }
+
+        [Given(@"opens first product from the list")]
+        public void GivenOpensFirstProductFromTheList()
+        {
+            PLPPage plp = new PLPPage(Driver);
+            IList<IWebElement> product = Driver.FindElements(plp.Product);
+            product[2].Click();
+        }
+
+        [Given(@"inceases quantity to (.*)")]
+        public void GivenInceasesQuantityTo(int p0)
+        {
+            Utilities ut = new Utilities(Driver);
+            PDPPage pdp = new PDPPage(Driver);
+            Driver.FindElement(pdp.quantity).Clear();
+            ut.EnterTextInElement(pdp.quantity, "2");
+        }
+
+        [When(@"user clicks on add to cart button")]
+        public void WhenUserClicksOnAddToCartButton()
+        {
+            Utilities ut = new Utilities(Driver);
+            PDPPage pdp = new PDPPage(Driver);
+            ut.ClickOnElement(pdp.addToCart);
+            ut.ClickOnElement(pdp.closePopUp);
+        }
+
+        [Then(@"product is added to the cart")]
+        public void ThenProductIsAddedToTheCart()
+        {
+            Utilities ut = new Utilities(Driver);
+            PDPPage pdp = new PDPPage(Driver);
+            Assert.True(ut.ElementDisplayed(pdp.cartProduct), "Product cart is empty");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
