@@ -13,6 +13,7 @@ namespace AutomationPractice.Pages
         readonly IWebDriver driver;
 
         public By Product = By.CssSelector(".product-name");
+        public By Keyword = By.CssSelector(".product-listing .lighter");
         
 
         public PLPPage(IWebDriver driver)
