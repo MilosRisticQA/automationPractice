@@ -32,12 +32,14 @@ namespace AutomationPractice.Steps
         }
 
         [Given(@"inceases quantity to (.*)")]
-        public void GivenInceasesQuantityTo(int p0)
+        public void GivenInceasesQuantityTo(string qty)
         {
             Utilities ut = new Utilities(Driver);
             PDPPage pdp = new PDPPage(Driver);
             Driver.FindElement(pdp.quantity).Clear();
-            ut.EnterTextInElement(pdp.quantity, "2");
+            ut.EnterTextInElement(pdp.quantity, qty);
+            string productName = ut.ReturnTextFromElement(pdp.productName);
+            ScenarioContext.Current.Add(TestConstants.ProductName, productName);
         }
 
         [When(@"user clicks on add to cart button")]
@@ -46,15 +48,21 @@ namespace AutomationPractice.Steps
             Utilities ut = new Utilities(Driver);
             PDPPage pdp = new PDPPage(Driver);
             ut.ClickOnElement(pdp.addToCart);
-            ut.ClickOnElement(pdp.closePopUp);
         }
+
+        [When(@"goes to checkout page")]
+        public void WhenGoesToCheckoutPage()
+        {
+            Utilities ut = new Utilities(Driver);
+            CartOverlayPage cop = new CartOverlayPage(Driver);
+            ut.ClickOnElement(cop.proceedToCheckout);
+        }
+
 
         [Then(@"product is added to the cart")]
         public void ThenProductIsAddedToTheCart()
         {
-            Utilities ut = new Utilities(Driver);
-            PDPPage pdp = new PDPPage(Driver);
-            Assert.True(ut.ElementDisplayed(pdp.cartProduct), "Product cart is empty");
+          
         }
 
 

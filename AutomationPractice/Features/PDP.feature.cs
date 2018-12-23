@@ -82,6 +82,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 12
  testRunner.When("user clicks on add to cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
+ testRunner.And("goes to checkout page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
  testRunner.Then("product is added to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -8,17 +8,12 @@ using System.Threading.Tasks;
 
 namespace AutomationPractice.Pages
 {
-    class PDPPage
+    class CartPage
     {
         readonly IWebDriver driver;
 
-        public By quantity = By.Id("quantity_wanted");
-        public By addToCart = By.Id("add_to_cart");
-        public By closePopUp = By.ClassName("cross");
-        public By cartProduct = By.ClassName("ajax_cart_product_txt_s");
-        public By productName = By.CssSelector("pb-center-column [itemprop='name']");
 
-        public PDPPage(IWebDriver driver)
+        public CartPage(IWebDriver driver)
         {
             this.driver = driver;
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));

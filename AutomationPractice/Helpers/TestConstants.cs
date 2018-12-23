@@ -22,5 +22,8 @@ namespace AutomationPractice.Helpers
         public const string AddressAlias = "QA Kurs";
         public const string State = "New York";
         public const string FullName = "";
+
+        //product name
+        public const string ProductName = "";
     }
 }

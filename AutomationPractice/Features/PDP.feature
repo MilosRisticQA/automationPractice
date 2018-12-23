@@ -10,5 +10,6 @@ Scenario:  User can add product to cart
 	And opens first product from the list
 	And inceases quantity to 2
 	When user clicks on add to cart button
+	And goes to checkout page
 	Then product is added to the cart
 
