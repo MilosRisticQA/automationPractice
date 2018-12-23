@@ -16,7 +16,7 @@ namespace AutomationPractice.Pages
         public By addToCart = By.Id("add_to_cart");
         public By closePopUp = By.ClassName("cross");
         public By cartProduct = By.ClassName("ajax_cart_product_txt_s");
-        public By productName = By.CssSelector("pb-center-column [itemprop='name']");
+        public By productName = By.CssSelector(".pb-center-column [itemprop='name']");
 
         public PDPPage(IWebDriver driver)
         {

@@ -61,5 +61,7 @@ namespace AutomationPractice.Helpers
         {
             return driver.FindElement(selector).GetAttribute("textContent");
         }
+
+
     }
 }

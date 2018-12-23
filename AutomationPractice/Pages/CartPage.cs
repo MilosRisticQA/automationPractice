@@ -12,6 +12,7 @@ namespace AutomationPractice.Pages
     {
         readonly IWebDriver driver;
 
+        public By cartProductName = By.CssSelector(".cart_description .product-name");
 
         public CartPage(IWebDriver driver)
         {

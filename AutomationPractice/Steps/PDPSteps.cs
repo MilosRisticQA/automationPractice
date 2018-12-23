@@ -62,7 +62,10 @@ namespace AutomationPractice.Steps
         [Then(@"product is added to the cart")]
         public void ThenProductIsAddedToTheCart()
         {
-          
+            Utilities ut = new Utilities(Driver);
+            CartPage cp = new CartPage(Driver);
+            string productName = ScenarioContext.Current.Get<string>(TestConstants.ProductName);
+            Assert.That(ut.ReturnTextFromElement(cp.cartProductName), is.EqualTo(productName), "Item is not added to cart");
         }
 
 
