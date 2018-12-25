@@ -38,7 +38,7 @@ namespace AutomationPractice.Steps
             Utilities ut = new Utilities(Driver);
             PLPPage plp = new PLPPage(Driver);
             string searchKeyword = ScenarioContext.Current.Get<string>(TestConstants.SearchKeyword);
-            Assert.
+            Assert.That(ut.ReturnTextFromElement(plp.Keyword).Contains(searchKeyword), "Keyword is not matched");
         }
 
 

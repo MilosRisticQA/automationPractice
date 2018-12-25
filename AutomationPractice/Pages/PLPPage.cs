@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,8 @@ namespace AutomationPractice.Pages
         readonly IWebDriver driver;
 
         public By Product = By.CssSelector(".product-name");
-        public By Keyword = By.CssSelector(".product-listing .lighter");
-        
+        public By Keyword = By.CssSelector("span.lighter");
+
 
         public PLPPage(IWebDriver driver)
         {

@@ -95,7 +95,7 @@ namespace AutomationPractice.Steps
 
 
 
-
+   
 
         [Then(@"user will be logged in")]
         public void ThenUserWillBeLoggedIn()
