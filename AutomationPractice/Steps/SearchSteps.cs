@@ -41,7 +41,5 @@ namespace AutomationPractice.Steps
             Assert.That(ut.ReturnTextFromElement(plp.Keyword).Contains(searchKeyword), "Keyword is not matched");
         }
 
-
-
     }
 }
