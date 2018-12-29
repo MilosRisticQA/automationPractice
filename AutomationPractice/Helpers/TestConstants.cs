@@ -25,8 +25,6 @@ namespace AutomationPractice.Helpers
 
         //product name
         public const string ProductName = "";
-
-        //search keyword
-        public const string SearchKeyword = "";
+        
     }
 }

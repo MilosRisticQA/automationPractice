@@ -1,6 +1,7 @@
 ﻿using AutomationPractice.Helpers;
 using AutomationPractice.Pages;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,6 @@ namespace AutomationPractice.Steps
             Utilities ut = new Utilities(Driver);
             HomePage hp = new HomePage(Driver);
             ut.EnterTextInElement(hp.searchInput, keyword);
-            string searchKeyword = ut.ReturnTextFromElement(hp.searchInput);
-            ScenarioContext.Current.Add(TestConstants.SearchKeyword, searchKeyword);
         }
 
         [Given(@"user submits search")]
@@ -35,10 +34,19 @@ namespace AutomationPractice.Steps
         [Then(@"search by keyword '(.*)' is done")]
         public void ThenSearchByKeywordIsDone(string keyword)
         {
-            Utilities ut = new Utilities(Driver);
-            PLPPage plp = new PLPPage(Driver);
-            string searchKeyword = ScenarioContext.Current.Get<string>(TestConstants.SearchKeyword);
-            Assert.That(ut.ReturnTextFromElement(plp.Keyword).Contains(searchKeyword), "Keyword is not matched");
+            
+            SearchPage sp = new SearchPage(Driver);
+            IList<IWebElement> titles = Driver.FindElements(sp.ProductTitle);
+            int resultsCount = titles.Count;
+            for (int i = 0; i < resultsCount -1; i++)
+            {
+                string title = titles[i].GetAttribute("title");
+
+                Assert.True(title.Contains(keyword), "Keyword we searched '" + keyword + "' is not in related element title");
+
+            }
+            
+            
         }
 
     }
