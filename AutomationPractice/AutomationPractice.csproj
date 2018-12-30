@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContactUsFeature.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\FooterFeature.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FooterFeature.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\MyAccount.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +106,7 @@
     <Compile Include="Pages\CartOverlayPage.cs" />
     <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\ContactUsPage.cs" />
+    <Compile Include="Pages\FooterPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\MyAccountPage.cs" />
     <Compile Include="Pages\MyWishlistPage.cs" />
@@ -110,6 +116,7 @@
     <Compile Include="Pages\SignUpPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\ContactUsSteps.cs" />
+    <Compile Include="Steps\FooterSteps.cs" />
     <Compile Include="Steps\MyAccountSteps.cs" />
     <Compile Include="Steps\PDPSteps.cs" />
     <Compile Include="Steps\SearchSteps.cs" />
@@ -121,6 +128,10 @@
     <None Include="Features\ContactUsFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ContactUsFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FooterFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FooterFeature.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\MyAccount.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
