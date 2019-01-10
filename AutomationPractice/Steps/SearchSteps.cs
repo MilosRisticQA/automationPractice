@@ -38,12 +38,12 @@ namespace AutomationPractice.Steps
             SearchPage sp = new SearchPage(Driver);
             IList<IWebElement> titles = Driver.FindElements(sp.ProductTitle);
             int resultsCount = titles.Count;
+
             for (int i = 0; i < resultsCount -1; i++)
             {
                 string title = titles[i].GetAttribute("title");
-
+                bla bala
                 Assert.True(title.Contains(keyword), "Keyword we searched '" + keyword + "' is not in related element title");
-
             }
             
             
