@@ -74,7 +74,7 @@ namespace AutomationPractice.Features
         [NUnit.Framework.DescriptionAttribute("User can open links under My Account section")]
         [NUnit.Framework.CategoryAttribute("footer")]
         [NUnit.Framework.TestCaseAttribute("My orders", "Order history", null)]
-        [NUnit.Framework.TestCaseAttribute("My aredit slips", "Credit slips", null)]
+        [NUnit.Framework.TestCaseAttribute("My credit slips", "Credit slips", null)]
         [NUnit.Framework.TestCaseAttribute("My addresses", "My addresses", null)]
         [NUnit.Framework.TestCaseAttribute("Manage my personal information", "Your personal information", null)]
         public virtual void UserCanOpenLinksUnderMyAccountSection(string myAccount, string page, string[] exampleTags)

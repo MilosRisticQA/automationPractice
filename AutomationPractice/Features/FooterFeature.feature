@@ -14,6 +14,6 @@ Scenario Outline: User can open links under My Account section
 	Examples: 
 	| My Account       | page                      |
 	| My orders        | Order history             |
-	| My aredit slips  | Credit slips              |
+	| My credit slips  | Credit slips              |
 	| My addresses     | My addresses              |
 	| Manage my personal information | Your personal information |
